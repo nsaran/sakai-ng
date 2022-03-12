@@ -18,6 +18,7 @@ import { TableComponent } from './components/table/table.component';
 import { ListComponent } from './components/list/list.component';
 import { TreeComponent } from './components/tree/tree.component';
 import { CrudComponent } from './components/crud/crud.component';
+import { MotsCrudComponent } from './components/motscrud/motscrud.component';
 import { BlocksComponent } from './components/blocks/blocks.component';
 import { FloatLabelComponent } from './components/floatlabel/floatlabel.component';
 import { InvalidStateComponent } from './components/invalidstate/invalidstate.component';
@@ -52,6 +53,7 @@ import { AccessComponent } from './components/access/access.component';
                     {path: 'uikit/charts', component: ChartsComponent},
                     {path: 'uikit/file', component: FileComponent},
                     {path: 'pages/crud', component: CrudComponent},
+                    {path: 'pages/motscrud', component: MotsCrudComponent},
                     {path: 'pages/timeline', component: TimelineComponent},
                     {path: 'pages/empty', component: EmptyComponent},
                     {path: 'icons', component: IconsComponent},

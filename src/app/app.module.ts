@@ -118,6 +118,7 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { FileComponent } from './components/file/file.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
 import { CrudComponent } from './components/crud/crud.component';
+import { MotsCrudComponent } from './components/motscrud/motscrud.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { BlocksComponent } from './components/blocks/blocks.component';
@@ -260,6 +261,7 @@ import { AccessComponent } from './components/access/access.component';
         IconsComponent,
         DocumentationComponent,
         CrudComponent,
+        MotsCrudComponent,
         TimelineComponent,
         BlocksComponent,
         BlockViewer,

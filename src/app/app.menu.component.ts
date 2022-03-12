@@ -34,6 +34,40 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
+                label: 'Entity',
+                items: [
+                    {
+                        label: 'Personal Information', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Employee', icon: 'pi pi-fw pi-bookmark', routerLink: ['/pages/motscrud', {'entity':'Employee'}]
+                            },
+                            {
+                                label: 'Candidate', icon: 'pi pi-fw pi-bookmark', routerLink: ['/pages/motscrud',{'entity':'Candidate'}]
+                            },
+                        ]
+                    },
+                    {
+                        label: 'Income Information', icon: 'pi pi-fw pi-bookmark',
+                        items: [
+                            {
+                                label: 'Employment', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    {label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark'},
+                                    {label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark'},
+                                ]
+                            },
+                            {
+                                label: 'Investment', icon: 'pi pi-fw pi-bookmark',
+                                items: [
+                                    {label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark'},
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            },            
+            {
                 label: 'UI Components',
                 items: [
                     {label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout']},
