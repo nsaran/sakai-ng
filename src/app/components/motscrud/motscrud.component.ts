@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../api/product';
 import { ProductService } from '../../service/productservice';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import { Router } from '@angular/router';
+import { Router, UrlSegment, ActivatedRoute } from '@angular/router';
 
 @Component({
     templateUrl: './motscrud.component.html',
@@ -11,17 +11,19 @@ import { Router } from '@angular/router';
 })
 export class MotsCrudComponent implements OnInit {
 
+    entityName: string;
+
     productDialog: boolean;
 
     deleteProductDialog: boolean = false;
 
     deleteProductsDialog: boolean = false;
 
-    products: Product[];
+    products: any[];
 
-    product: Product;
+    product: any;
 
-    selectedProducts: Product[];
+    selectedProducts: any[];
 
     submitted: boolean;
 
@@ -36,12 +38,17 @@ export class MotsCrudComponent implements OnInit {
     saveButton: boolean = false;
 
     constructor(private productService: ProductService, private messageService: MessageService,
-                private confirmationService: ConfirmationService,  private router: Router) {}
+                private confirmationService: ConfirmationService,  private router: Router,
+                private activeRoute: ActivatedRoute) {}
 
     ngOnInit() {
 
         //forces component to reload
         this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.activeRoute.params.subscribe(params => {
+            this.entityName = params['entity'];
+            console.log(this.entityName);
+          })
 
         //this.productService.getProducts().then(data => this.products = data);
 

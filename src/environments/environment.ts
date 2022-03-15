@@ -14,3 +14,17 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+export const apiEndpoints: { [key: string]: { [key:string]: string}} = {
+"localhost": 
+    { 
+      "loginUrl" : "https://localhost:8080",
+      "logoutUrl" : "https://localhost:8080"
+    }
+  ,
+  "devl": 
+    { 
+      "loginUrl" : "https://localhost:8080",
+      "logoutUrl" : "https://localhost:8080"
+    }  
+}

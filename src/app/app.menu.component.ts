@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppMainComponent } from './app.main.component';
+import { MetaService } from './service/metaservice';
 
 @Component({
     selector: 'app-menu',
@@ -23,9 +24,11 @@ export class AppMenuComponent implements OnInit {
 
     model: any[];
 
-    constructor(public appMain: AppMainComponent) { }
+    constructor(private metaService: MetaService, public appMain: AppMainComponent) { }
 
     ngOnInit() {
+        this.metaService.getEntities().then(data => this.model = data);
+        /*
         this.model = [
             {
                 label: 'Home',
@@ -167,7 +170,8 @@ export class AppMenuComponent implements OnInit {
                     }
                 ]
             }
-        ];
+        ]; */
+
     }
 
     onKeydown(event: KeyboardEvent) {

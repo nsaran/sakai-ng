@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -135,12 +135,15 @@ import { IconService } from './service/iconservice';
 import { NodeService } from './service/nodeservice';
 import { PhotoService } from './service/photoservice';
 import { ProductService } from './service/productservice';
+import { MetaService } from './service/metaservice';
 import { MenuService } from './service/app.menu.service';
 import { ConfigService } from './service/app.config.service';
 import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AccessComponent } from './components/access/access.component';
+
+import { HTTPServiceInterceptor } from './service/http-service.interceptor';
 
 @NgModule({
     imports: [
@@ -279,7 +282,9 @@ import { AccessComponent } from './components/access/access.component';
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService, ConfigService
+        PhotoService, ProductService, MetaService, MenuService, ConfigService,
+        {provide: HTTP_INTERCEPTORS, useClass: HTTPServiceInterceptor, multi: true},
+        {provide: APP_INITIALIZER, useFactory: (metaService: MetaService) => () => metaService.getEntities(), deps: [MetaService], multi: true}
     ],
     bootstrap: [AppComponent]
 })

@@ -1,0 +1,96 @@
+{
+    "data": [
+        {
+            "entity": "Employee",
+            "label": "Employee",
+            "description": "This entity holds the demographics details of the Employee",
+            "group": "Personal Information",
+            "columns": [
+                {
+                    "name": "id", 
+                    "label": "Unique record ID",
+                    "description": "Unique Identified of the Table",
+                    "type": "string",
+                    "size": "string",
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": false
+                },
+                {
+                    "name": "firstName", 
+                    "label": "First Name",
+                    "description": "First Name of the Employee",
+                    "type": "string",
+                    "size": "21",
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": false
+                },
+                {
+                    "name": "lastName", 
+                    "label": "Last Name",
+                    "description": "Last Name of the Employee",
+                    "type": "string",
+                    "size": "15",
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": false
+                },
+                {
+                    "name": "dobDt", 
+                    "label": "Date of Birth",
+                    "description": "Birth Date of the Employee",
+                    "type": "date",
+                    "size": null,
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": false
+                }                                
+            ],
+            "relationship": [
+                {
+                    "entity": "Salary", 
+                    "association": "1:1"
+                },
+                {
+                    "entity": "Address", 
+                    "association": "1:1"
+                },
+                {
+                    "entity": "Department", 
+                    "association": "1:N"
+                }
+            ]            
+        },
+        {
+            "entity": "Salary",
+            "label": "Salary",
+            "description": "This entity holds the Salary Details of the Employee",
+            "group": "Personal Information",
+            "columns": [
+                {
+                    "name": "id", 
+                    "label": "Unique record ID",
+                    "description": "Unique Identified of the Table",
+                    "type": "string",
+                    "size": "string",
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": false
+                },
+                {
+                    "name": "basicPayAmt", 
+                    "label": "Basic Pay",
+                    "description": "Basic of the Employee",
+                    "type": "number",
+                    "size": "17,2",
+                    "hidden": "false",
+                    "readonly": "false",
+                    "required": true
+                }                             
+            ],
+            "relationship": [
+            ]            
+        }        
+    ]
+}

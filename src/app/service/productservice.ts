@@ -34,5 +34,5 @@ export class ProductService {
         .toPromise()
         .then(res => res.data as Product[])
         .then(data => data);
-    }
+    }    
 }
