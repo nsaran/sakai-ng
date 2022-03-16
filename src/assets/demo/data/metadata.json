@@ -1,96 +1,1070 @@
 {
     "data": [
         {
-            "entity": "Employee",
-            "label": "Employee",
-            "description": "This entity holds the demographics details of the Employee",
-            "group": "Personal Information",
+            "entity": "store",
+            "label": "Store",
+            "description": "store",
+            "group": "default",
             "columns": [
-                {
-                    "name": "id", 
-                    "label": "Unique record ID",
-                    "description": "Unique Identified of the Table",
-                    "type": "string",
-                    "size": "string",
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": false
-                },
-                {
-                    "name": "firstName", 
-                    "label": "First Name",
-                    "description": "First Name of the Employee",
-                    "type": "string",
-                    "size": "21",
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": false
-                },
-                {
-                    "name": "lastName", 
-                    "label": "Last Name",
-                    "description": "Last Name of the Employee",
-                    "type": "string",
-                    "size": "15",
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": false
-                },
-                {
-                    "name": "dobDt", 
-                    "label": "Date of Birth",
-                    "description": "Birth Date of the Employee",
-                    "type": "date",
-                    "size": null,
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": false
-                }                                
-            ],
-            "relationship": [
-                {
-                    "entity": "Salary", 
-                    "association": "1:1"
-                },
-                {
-                    "entity": "Address", 
-                    "association": "1:1"
-                },
-                {
-                    "entity": "Department", 
-                    "association": "1:N"
-                }
-            ]            
-        },
-        {
-            "entity": "Salary",
-            "label": "Salary",
-            "description": "This entity holds the Salary Details of the Employee",
-            "group": "Personal Information",
+              {
+                "id": null,
+                "name": "store_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "manager_staff_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "address_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "staff",
+            "label": "Staff",
+            "description": "staff",
+            "group": "default",
             "columns": [
-                {
-                    "name": "id", 
-                    "label": "Unique record ID",
-                    "description": "Unique Identified of the Table",
-                    "type": "string",
-                    "size": "string",
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": false
-                },
-                {
-                    "name": "basicPayAmt", 
-                    "label": "Basic Pay",
-                    "description": "Basic of the Employee",
-                    "type": "number",
-                    "size": "17,2",
-                    "hidden": "false",
-                    "readonly": "false",
-                    "required": true
-                }                             
-            ],
-            "relationship": [
-            ]            
-        }        
+              {
+                "id": null,
+                "name": "staff_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "first_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "address_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "email",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "store_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "active",
+                "label": null,
+                "description": null,
+                "type": "-7",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "username",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "password",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "picture",
+                "label": null,
+                "description": null,
+                "type": "-2",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "rental",
+            "label": "Rental",
+            "description": "rental",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "rental_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "rental_date",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "inventory_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "customer_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "return_date",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "staff_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "payment",
+            "label": "Payment",
+            "description": "payment",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "payment_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "customer_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "staff_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "rental_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "amount",
+                "label": null,
+                "description": null,
+                "type": "2",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "payment_date",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "language",
+            "label": "Language",
+            "description": "language",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "language_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "name",
+                "label": null,
+                "description": null,
+                "type": "1",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "inventory",
+            "label": "Inventory",
+            "description": "inventory",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "inventory_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "film_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "store_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "film_category",
+            "label": "Film_category",
+            "description": "film_category",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "film_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "category_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "film_actor",
+            "label": "Film_actor",
+            "description": "film_actor",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "actor_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "film_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "film",
+            "label": "Film",
+            "description": "film",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "film_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "title",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "description",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "release_year",
+                "label": null,
+                "description": null,
+                "type": "2001",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "language_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "rental_duration",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "rental_rate",
+                "label": null,
+                "description": null,
+                "type": "2",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "length",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "replacement_cost",
+                "label": null,
+                "description": null,
+                "type": "2",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "rating",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "special_features",
+                "label": null,
+                "description": null,
+                "type": "2003",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "fulltext",
+                "label": null,
+                "description": null,
+                "type": "1111",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "customer",
+            "label": "Customer",
+            "description": "customer",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "customer_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "store_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "first_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "email",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "address_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "activebool",
+                "label": null,
+                "description": null,
+                "type": "-7",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "create_date",
+                "label": null,
+                "description": null,
+                "type": "91",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "active",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "country",
+            "label": "Country",
+            "description": "country",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "country_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "country",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "city",
+            "label": "City",
+            "description": "city",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "city_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "city",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "country_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "category",
+            "label": "Category",
+            "description": "category",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "category_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "address",
+            "label": "Address",
+            "description": "address",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "address_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "address",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "address2",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "district",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "city_id",
+                "label": null,
+                "description": null,
+                "type": "5",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "postal_code",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "phone",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          },
+          {
+            "entity": "actor",
+            "label": "Actor",
+            "description": "actor",
+            "group": "default",
+            "columns": [
+              {
+                "id": null,
+                "name": "actor_id",
+                "label": null,
+                "description": null,
+                "type": "4",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "first_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_name",
+                "label": null,
+                "description": null,
+                "type": "12",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              },
+              {
+                "id": null,
+                "name": "last_update",
+                "label": null,
+                "description": null,
+                "type": "93",
+                "size": null,
+                "hidden": null,
+                "readonly": null,
+                "required": null
+              }
+            ]
+          }                   
     ]
 }

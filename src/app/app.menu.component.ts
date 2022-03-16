@@ -27,7 +27,8 @@ export class AppMenuComponent implements OnInit {
     constructor(private metaService: MetaService, public appMain: AppMainComponent) { }
 
     ngOnInit() {
-        this.metaService.getEntities().then(data => this.model = data);
+        //this.metaService.getEntities().then(data => this.model = data);
+        this.model = this.metaService.getEntityList();
         /*
         this.model = [
             {

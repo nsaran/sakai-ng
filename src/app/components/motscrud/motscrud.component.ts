@@ -13,6 +13,8 @@ export class MotsCrudComponent implements OnInit {
 
     entityName: string;
 
+    entityLabel: string;
+
     productDialog: boolean;
 
     deleteProductDialog: boolean = false;
@@ -47,7 +49,8 @@ export class MotsCrudComponent implements OnInit {
         this.router.routeReuseStrategy.shouldReuseRoute = () => false;
         this.activeRoute.params.subscribe(params => {
             this.entityName = params['entity'];
-            console.log(this.entityName);
+            this.entityLabel = params['label'];
+            console.log(this.entityLabel);
           })
 
         //this.productService.getProducts().then(data => this.products = data);
