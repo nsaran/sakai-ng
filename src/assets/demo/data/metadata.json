@@ -435,7 +435,7 @@
           },
           {
             "entity": "film_category",
-            "label": "Film_category",
+            "label": "Film Category",
             "description": "film_category",
             "group": "default",
             "columns": [
