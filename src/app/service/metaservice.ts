@@ -15,6 +15,28 @@ export class MetaService {
         .then(data => data);
     }
     
+    getColumnList(entityName: string) {
+        let cols = [];
+        this.getColumnDetailsForEntity().subscribe((response: any) => {
+            if(response && response.data) {
+                response.data.forEach(table => {
+                    if(table.entity == entityName) {
+                        table.columns.forEach(column => {
+                            let columnData = {
+                                "field": column.name, 
+                                "header": column.name,
+                                "type": column.type
+                            };
+                            cols.push(columnData);                   
+                        });
+                    }
+                });
+            }
+        })        
+        return cols;
+    }
+
+
     getEntityList() {
         let itemArrayObject = [];
         let map = new Map<string, string>()  ;

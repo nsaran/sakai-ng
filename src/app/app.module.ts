@@ -142,6 +142,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AccessComponent } from './components/access/access.component';
+import { DataService } from './service/dataservice';
 
 import { HTTPServiceInterceptor } from './service/http-service.interceptor';
 
@@ -282,7 +283,7 @@ import { HTTPServiceInterceptor } from './service/http-service.interceptor';
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MetaService, MenuService, ConfigService,
+        PhotoService, ProductService, MetaService, MenuService, ConfigService, DataService,
         {provide: HTTP_INTERCEPTORS, useClass: HTTPServiceInterceptor, multi: true},
         {provide: APP_INITIALIZER, useFactory: (metaService: MetaService) => () => metaService.getEntities(), deps: [MetaService], multi: true}
     ],

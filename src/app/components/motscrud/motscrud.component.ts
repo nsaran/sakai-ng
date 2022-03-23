@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../api/product';
 import { ProductService } from '../../service/productservice';
+import { DataService } from '../../service/dataservice';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Router, UrlSegment, ActivatedRoute } from '@angular/router';
+import { MetaService } from '../../service/metaservice';
 
 @Component({
     templateUrl: './motscrud.component.html',
@@ -14,6 +16,12 @@ export class MotsCrudComponent implements OnInit {
     entityName: string;
 
     entityLabel: string;
+
+    entity: any;
+
+    entities: any[];
+
+    selectedEntities: any[];
 
     productDialog: boolean;
 
@@ -31,6 +39,8 @@ export class MotsCrudComponent implements OnInit {
 
     cols: any[];
 
+    columns: any[];
+
     statuses: any[];
 
     rowsPerPageOptions = [5, 10, 20];
@@ -41,7 +51,8 @@ export class MotsCrudComponent implements OnInit {
 
     constructor(private productService: ProductService, private messageService: MessageService,
                 private confirmationService: ConfirmationService,  private router: Router,
-                private activeRoute: ActivatedRoute) {}
+                private activeRoute: ActivatedRoute, private metaService: MetaService,
+                private dataService: DataService) {}
 
     ngOnInit() {
 
@@ -50,7 +61,8 @@ export class MotsCrudComponent implements OnInit {
         this.activeRoute.params.subscribe(params => {
             this.entityName = params['entity'];
             this.entityLabel = params['label'];
-            console.log(this.entityLabel);
+            this.columns = this.metaService.getColumnList(this.entityName);
+            console.log(this.columns);
           })
 
         //this.productService.getProducts().then(data => this.products = data);
@@ -92,7 +104,8 @@ export class MotsCrudComponent implements OnInit {
     }
 
     searchProduct() {
-        this.productService.getProducts().then(data => this.products = data);
+        //this.productService.getProducts().then(data => this.products = data);
+        this.dataService.getData(this.entityName).then(data => this.products = data);        
         this.productDialog = false;
     }
 
@@ -158,6 +171,11 @@ export class MotsCrudComponent implements OnInit {
             this.product = {};
         }
     }
+
+    isStringType(columnName: string): any {
+        return false;
+    }
+
 
     findIndexById(id: string): number {
         let index = -1;
