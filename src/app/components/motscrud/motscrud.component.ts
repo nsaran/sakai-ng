@@ -23,17 +23,11 @@ export class MotsCrudComponent implements OnInit {
 
     selectedEntities: any[];
 
-    productDialog: boolean;
+    entityDialog: boolean;
 
-    deleteProductDialog: boolean = false;
+    deleteEntityDialog: boolean = false;
 
-    deleteProductsDialog: boolean = false;
-
-    products: any[];
-
-    product: any;
-
-    selectedProducts: any[];
+    deleteEntitiesDialog: boolean = false;
 
     submitted: boolean;
 
@@ -87,88 +81,88 @@ export class MotsCrudComponent implements OnInit {
     }
 
     openNew() {
-        this.product = {};
+        this.entity = {};
         this.submitted = false;
-        this.productDialog = true;
+        this.entityDialog = true;
         this.searchButton = false;
         this.saveButton = true;
     }
 
 
     openSearch() {
-        this.product = {};
+        this.entity = {};
         this.submitted = false;
-        this.productDialog = true;
+        this.entityDialog = true;
         this.searchButton = true;
         this.saveButton = false;
     }
 
-    searchProduct() {
+    searchEntity() {
         //this.productService.getProducts().then(data => this.products = data);
-        this.dataService.getData(this.entityName).then(data => this.products = data);        
-        this.productDialog = false;
+        this.dataService.getData(this.entityLabel).then(data => this.entities = data);        
+        this.entityDialog = false;
     }
 
 
-    deleteSelectedProducts() {
-        this.deleteProductsDialog = true;
+    deleteSelectedEntities() {
+        this.deleteEntitiesDialog = true;
     }
 
-    editProduct(product: Product) {
-        this.product = {...product};
-        this.productDialog = true;
+    editEntity(entity: any) {
+        this.entity = {...entity};
+        this.entityDialog = true;
         this.searchButton = false;
         this.saveButton = true;
     }
 
-    deleteProduct(product: Product) {
-        this.deleteProductDialog = true;
-        this.product = {...product};
+    deleteEntity(entity: any) {
+        this.deleteEntityDialog = true;
+        this.entity = {...entity};
     }
 
     confirmDeleteSelected(){
-        this.deleteProductsDialog = false;
-        this.products = this.products.filter(val => !this.selectedProducts.includes(val));
+        this.deleteEntitiesDialog = false;
+        this.entities = this.entities.filter(val => !this.selectedEntities.includes(val));
         this.messageService.add({severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000});
-        this.selectedProducts = null;
+        this.selectedEntities = null;
     }
 
     confirmDelete(){
-        this.deleteProductDialog = false;
-        this.products = this.products.filter(val => val.id !== this.product.id);
+        this.deleteEntityDialog = false;
+        this.entities = this.entities.filter(val => val.id !== this.entity.id);
         this.messageService.add({severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000});
-        this.product = {};
+        this.entity = {};
     }
 
     hideDialog() {
-        this.productDialog = false;
+        this.entityDialog = false;
         this.submitted = false;
         this.searchButton = false;
         this.saveButton = false;
     }
 
-    saveProduct() {
+    saveEntity() {
         this.submitted = true;
 
-        if (this.product.name.trim()) {
-            if (this.product.id) {
+        if (this.entity.name.trim()) {
+            if (this.entity.id) {
                 // @ts-ignore
                 this.product.inventoryStatus = this.product.inventoryStatus.value ? this.product.inventoryStatus.value: this.product.inventoryStatus;
-                this.products[this.findIndexById(this.product.id)] = this.product;
+                this.entities[this.findIndexById(this.entity.id)] = this.entity;
                 this.messageService.add({severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000});
             } else {
-                this.product.id = this.createId();
-                this.product.code = this.createId();
-                this.product.image = 'product-placeholder.svg';
+                this.entity.id = this.createId();
+                this.entity.code = this.createId();
+                this.entity.image = 'product-placeholder.svg';
                 // @ts-ignore
                 this.product.inventoryStatus = this.product.inventoryStatus ? this.product.inventoryStatus.value : 'INSTOCK';
-                this.products.push(this.product);
+                this.entities.push(this.entity);
                 this.messageService.add({severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000});
             }
 
-            this.products = [...this.products];
-            this.productDialog = false;
-            this.product = {};
+            this.entities = [...this.entities];
+            this.entityDialog = false;
+            this.entity = {};
         }
     }
 
@@ -179,8 +173,8 @@ export class MotsCrudComponent implements OnInit {
 
     findIndexById(id: string): number {
         let index = -1;
-        for (let i = 0; i < this.products.length; i++) {
-            if (this.products[i].id === id) {
+        for (let i = 0; i < this.entities.length; i++) {
+            if (this.entities[i].id === id) {
                 index = i;
                 break;
             }

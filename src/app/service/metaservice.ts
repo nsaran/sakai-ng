@@ -25,6 +25,7 @@ export class MetaService {
                             let columnData = {
                                 "field": column.name, 
                                 "header": column.name,
+                                "label": column.label,
                                 "type": column.type
                             };
                             cols.push(columnData);                   
